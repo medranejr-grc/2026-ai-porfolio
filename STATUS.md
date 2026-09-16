@@ -25,10 +25,11 @@ reserved the public/private flip for himself — "we'll do that together when I 
 **Do not flip this repo public without him in the loop**, regardless of how complete it looks.
 
 **Open before it's ready to share:**
-- The contact line at the bottom of `README.md` is a placeholder (`[ contact — pending ]`) —
-  Michael hasn't said what to put there (personal email, a form, nothing at all).
 - No final read-through by Michael yet of the compressed capstone/GRC-system content against his
   own memory of the source material.
+
+**Resolved 2026-09-15:** contact line set to `miked@veldt-ai.com` in both `README.md` and the
+matching Artifact — a work-domain address, his choice, not his personal Gmail.
 
 **Related:** a matching capability-brief Artifact was published to claude.ai earlier the same
 session (private, not linked from this repo) — see the hq session transcript for the URL if it's
