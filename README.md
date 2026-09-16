@@ -5,7 +5,7 @@ mandate — a published governance framework, two production compliance agents, 
 discipline showing up everywhere else I've built.
 
 **Scope:** agentic AI × security governance
-**Stack:** Claude Code, Google ADK/Vertex, GPT-5.x, Python
+**Stack:** Claude Code, Cursor, Google ADK/Vertex, GPT-5.x, Python
 
 ---
 
@@ -131,7 +131,8 @@ into a document nobody's systems actually feed.
 ---
 
 Same thesis running through all four: govern what an agent *is*, with a human boundary that can
-narrow but never broaden, before trusting what it does. Built and verified in one commodity
-harness (Claude Code) and one managed-agent platform (Vertex/ADK) — near-frontier models both.
+narrow but never broaden, before trusting what it does. Built and verified across two commodity
+harnesses (Claude Code, Cursor) and one managed-agent platform (Vertex/ADK) — near-frontier
+models throughout.
 
 *[ contact — pending ]*
