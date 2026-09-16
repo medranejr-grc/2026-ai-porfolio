@@ -92,9 +92,23 @@ irreversible step — recur in systems built for entirely different purposes.
 | Companion app (private, third party) | A constitutional operating instruction plus a hard architectural constraint — conversation history handled server-side only, never client-exposed | Production |
 | Claude Code skill authoring | Eleven authored skills, composed — one skill invokes another as its own verification step inside a gated pipeline | Nine live |
 
+**Real code, not just descriptions of it** — both systems above have live production repos that
+stay private (competitive product-discovery method, client work, business strategy). What's safe
+to actually read is broken out here:
+
+- **[`samples/phantom/`](samples/phantom/)** — three unmodified files from the media pipeline's
+  guardrail layer: spend caps with three-mode enforcement, automated technical QC, automated
+  visual-layout QC.
+- **[`samples/veldt-digital/`](samples/veldt-digital/)** — the six-agent flywheel's real GitHub
+  Actions orchestration (scheduling, error paths, notification logic) — not the agent logic
+  itself, which is the working part of a live business.
+
 ---
 
 ## Case study — governance response to a rogue procurement agent
+
+**[Read the full deliverable →](case-study-capstone.md)** — the real capstone document in full,
+not a summary, with only the co-authors' names withheld.
 
 Capstone, Security Architect program, March 2026. A three-person team was given one incident
 scenario and asked to produce a full cross-domain response, one member per domain. I led the Risk

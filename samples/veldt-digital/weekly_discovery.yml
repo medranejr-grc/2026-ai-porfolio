@@ -1,0 +1,65 @@
+name: Weekly Product Discovery
+
+on:
+  schedule:
+    - cron: '0 10 * * 1'   # Every Monday 10am UTC
+  workflow_dispatch:         # Manual trigger anytime
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run discovery agent (intelligence-informed)
+        id: discovery
+        run: |
+          python -m product_discovery.discovery_agent \
+            --niche auto \
+            --output-json \
+            --non-interactive \
+            > discovery_output.json 2>&1
+          echo "exit_code=$?" >> $GITHUB_OUTPUT
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          REDDIT_USER_AGENT: veldt-discovery-agent/1.0
+
+      - name: Upload brief artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: product-brief-${{ github.run_id }}
+          path: discovery_output.json
+          retention-days: 30
+
+      - name: Send notification email
+        if: steps.discovery.outputs.exit_code == '0'
+        run: python -m shared.notify --type brief_ready
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          NOTIFY_EMAIL: ${{ secrets.NOTIFY_EMAIL }}
+
+      - name: Flag failure
+        if: steps.discovery.outputs.exit_code != '0'
+        run: python -m shared.notify --type discovery_failed
+        env:
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          NOTIFY_EMAIL: ${{ secrets.NOTIFY_EMAIL }}
