@@ -1,4 +1,4 @@
-# Phantom Studios — guardrail code (excerpted)
+# Phantom Studios: guardrail code (excerpted)
 
 Three real files, unmodified, pulled from a larger private production pipeline (122 Python
 modules) that generates AI music videos and ad content. This is the pipeline's engineering
@@ -10,15 +10,15 @@ documents (GTM strategy, outreach scripts) that live in the same private repo. T
 private; this excerpt is scoped to the control layer specifically, because that's the part
 relevant to agent governance rather than to the media business itself.
 
-- **`phantom_budget.py`** — cost estimation and spend guardrails across three cost centers
+- **`phantom_budget.py`**: cost estimation and spend guardrails across three cost centers
   (generation API, editing credits, orchestration tokens), enforced in three modes: observe /
   warn / hardcap. Every price marked `verified=False` is flagged as needing confirmation against
   real billing before the total is trusted; the tool refuses to assert confidence it hasn't
   earned.
-- **`phantom_ffmpeg_qc.py`** — automated technical QC (resolution, audio presence, spec
+- **`phantom_ffmpeg_qc.py`**: automated technical QC (resolution, audio presence, spec
   conformance) run at fixed pipeline gates, before lip-sync and before delivery. Machine-readable
   `--json` output.
-- **`phantom_layout_qc.py`** — automated visual-layout QC: draws the pipeline's safe-zone
+- **`phantom_layout_qc.py`**: automated visual-layout QC that draws the pipeline's safe-zone
   definitions over extracted frames and flags subjects that land outside them, for human review
   before a clip is approved.
 

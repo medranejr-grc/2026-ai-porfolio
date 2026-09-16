@@ -1,4 +1,4 @@
-# Michael E. Drane Jr. — Agent Governance & Security Engineering
+# Michael E. Drane Jr.: Agent Governance & Security Engineering
 
 I build autonomous agents, and I build the controls that keep them from acting past their
 mandate: a published governance framework, two production compliance agents, and the same
@@ -9,7 +9,7 @@ discipline showing up everywhere else I've built.
 
 ---
 
-## Governance architecture — The Lacey Framework
+## Governance architecture: The Lacey Framework
 
 Constitutional governance for AI agents: define the mission, the people it serves, and the
 human-authority boundary *before* defining what the agent is allowed to do.
@@ -32,12 +32,12 @@ public, CC BY-SA 4.0 (essays) / CC0 (templates and examples).
 
 ---
 
-## Production systems — GRC automation
+## Production systems: GRC automation
 
 Two internal builds, described at architecture level only, with the incident that shaped each
 design decision.
 
-### SOC 2 / Vendor Risk Reviewer — *in production*
+### SOC 2 / Vendor Risk Reviewer (in production)
 
 Replaces a multi-hour manual read of a third-party audit report against an internal control
 baseline. An 8-stage pipeline on Google's Agent Development Kit, deployed on Vertex: intake,
@@ -56,7 +56,7 @@ prompt into deterministic code.
 Outcome: a multi-hour manual review → single-digit minutes of machine drafting, plus a shorter
 human pass.
 
-### Security Questionnaire Drafting Engine — *proof of concept, paused*
+### Security Questionnaire Drafting Engine (proof of concept, paused)
 
 Drafts sourced answers to customer security questionnaires across dozens of spreadsheet layouts.
 A thin managed-agent shell over a deterministic Python pipeline: a source-authority waterfall
@@ -80,7 +80,7 @@ an independent scoring check on that tool's output.
 
 ---
 
-## Applied elsewhere — same controls, different domain
+## Applied elsewhere: same controls, different domain
 
 The same instincts (hard spend caps, non-negotiable human gates, verification before each
 irreversible step) recur in systems built for entirely different purposes.
@@ -96,18 +96,18 @@ irreversible step) recur in systems built for entirely different purposes.
 stay private (competitive product-discovery method, client work, business strategy). What's safe
 to actually read is broken out here:
 
-- **[`samples/phantom/`](samples/phantom/)** — three unmodified files from the media pipeline's
+- **[`samples/phantom/`](samples/phantom/)**: three unmodified files from the media pipeline's
   guardrail layer: spend caps with three-mode enforcement, automated technical QC, automated
   visual-layout QC.
-- **[`samples/veldt-digital/`](samples/veldt-digital/)** — the six-agent flywheel's real GitHub
+- **[`samples/veldt-digital/`](samples/veldt-digital/)**: the six-agent flywheel's real GitHub
   Actions orchestration (scheduling, error paths, notification logic), not the agent logic
   itself, which is the working part of a live business.
 
 ---
 
-## Case study — governance response to a rogue procurement agent
+## Case study: governance response to a rogue procurement agent
 
-**[Read the full deliverable →](case-study-capstone.md)** — the real capstone document in full,
+**[Read the full deliverable →](case-study-capstone.md)**: the real capstone document in full,
 not a summary, with only the co-authors' names withheld.
 
 Capstone, Security Architect program, March 2026. A three-person team was given one incident
