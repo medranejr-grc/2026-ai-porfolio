@@ -1,12 +1,20 @@
 # STATUS — 2026 AI Portfolio
 
 **Active.** Built 2026-09-15 in response to an inbound job inquiry about agentic-AI / cyber work.
-Content assembled from: the published Lacey Framework, two sanitized internal Vertex/ADK
-compliance agents (architecture-level only, no employer/product/evidence specifics), the
-Security Architect capstone (real content pulled from the source .docx, teammates credited as
-"a three-person team" with no names, per founder decision 2026-09-15), and cross-domain agent
-engineering evidence generalized to avoid naming other private repos by business name in a
-document meant for external sharing.
+Content: the published Lacey Framework, two sanitized internal Vertex/ADK compliance agents
+(architecture-level only, no employer/product/evidence specifics), the Security Architect capstone
+(the real deliverable in full at `case-study-capstone.md` — not a summary — teammates credited as
+"a three-person team" with no names, per founder decision), and cross-domain agent engineering
+evidence.
+
+**Real code included, not just descriptions.** `samples/phantom/` and `samples/veldt-digital/`
+hold actual unmodified files pulled from two private production repos, chosen after reading the
+code itself (not just filenames) to separate engineering-guardrail code from live competitive
+method. `veldt-digital`'s actual agent logic (`product_discovery/`, `intelligence/`) was
+deliberately excluded — `product_hacker.py` and `intelligence_layer.py` *are* the business's
+competitive method in executable form, not incidental implementation, and publishing them would
+hand it away rather than demonstrate engineering skill. Both source repos' full git history (not
+just current tree) was scanned for secrets before anything was copied — clean on both.
 
 **Repo name carries a typo** (`2026-ai-porfolio`, not "portfolio") — kept as Michael specified it
 rather than silently corrected. Rename together if he wants it fixed; GitHub repo renames don't
