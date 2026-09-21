@@ -75,8 +75,7 @@ instructions: resistance to text injected inside a customer's own questionnaire.
 data-promotion check auto-blocks unlisted organization-shaped name patterns, and it once caught
 a real third-party name leaking into an upstream file before use.
 
-Paused as a standalone build in favor of evaluating a purchased tool. It still runs narrowly as
-an independent scoring check on that tool's output.
+Paused as a standalone build; not currently under further development.
 
 ---
 
