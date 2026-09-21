@@ -148,4 +148,4 @@ narrow but never broaden, before trusting what it does. Built and verified acros
 harnesses (Claude Code, Cursor) and one managed-agent platform (Vertex/ADK), near-frontier
 models throughout.
 
-Reach me at [miked@veldt-ai.com](mailto:miked@veldt-ai.com).
+Reach me at [medranejr@outlook.com](mailto:medranejr@outlook.com).
