@@ -34,8 +34,8 @@ public, CC BY-SA 4.0 (essays) / CC0 (templates and examples).
 
 ## Production systems: GRC automation
 
-Two internal builds, described at architecture level only, with the incident that shaped each
-design decision.
+Three internal builds, described at architecture level only, with the incident that shaped each
+design decision where one exists.
 
 ### SOC 2 / Vendor Risk Reviewer (in production)
 
@@ -56,7 +56,7 @@ prompt into deterministic code.
 Outcome: a multi-hour manual review → single-digit minutes of machine drafting, plus a shorter
 human pass.
 
-### Security Questionnaire Drafting Engine (proof of concept, paused)
+### Security Questionnaire Drafting Engine (in production)
 
 Drafts sourced answers to customer security questionnaires across dozens of spreadsheet layouts.
 A thin managed-agent shell over a deterministic Python pipeline: a source-authority waterfall
@@ -75,7 +75,18 @@ instructions: resistance to text injected inside a customer's own questionnaire.
 data-promotion check auto-blocks unlisted organization-shaped name patterns, and it once caught
 a real third-party name leaking into an upstream file before use.
 
-Paused as a standalone build; not currently under further development.
+Two tracks exist today. A NotebookLM-based version, built on the same evidence sources and
+instruction framework, is in active production use answering real risk-assessment questions. A
+more heavily engineered version, the deterministic pipeline described above, deployed on
+Vertex/ADK, is in active development toward its own production release.
+
+### Contract Redlining Workflow (in production via NotebookLM)
+
+Drafts first-pass redline suggestions against incoming customer contract paper, grounded in the
+same evidence-and-instruction-framework pattern as the two agents above. In active production
+use on live contracts; each one processed feeds capability growth ahead of a planned, more
+heavily engineered deterministic-pipeline build on Vertex/ADK, the same prototype-then-harden
+path the other two agents followed.
 
 ---
 
