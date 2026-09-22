@@ -101,6 +101,7 @@ irreversible step) recur in systems built for entirely different purposes.
 | Six-agent commerce flywheel | Discovery → build → deploy → ads → feedback, on a scheduled cron trigger, with one deliberate human approval gate before any spend commits | Active · scheduled |
 | Companion app (private, third party) | A constitutional operating instruction plus a hard architectural constraint: conversation history handled server-side only, never client-exposed | Production |
 | Claude Code skill authoring | Eleven authored skills, composed: one skill invokes another as its own verification step inside a gated pipeline | Nine live |
+| Client outreach pipeline monitor | Deterministic health checks kept separate from LLM narration · daily brief and free-text Q&A grounded only in real counts, never inference · a hard "never state a number that isn't in the input" rule, live-tested against a question the data genuinely couldn't answer, where it correctly said so instead of guessing | Active |
 
 **Real code, not just descriptions of it.** Both systems above have live production repos that
 stay private (competitive product-discovery method, client work, business strategy). What's safe
